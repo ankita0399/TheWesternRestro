@@ -1,0 +1,324 @@
+/* CSS Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* CSS Variables */
+
+:root {
+    --navbar-height: 59px;
+}
+
+/* Navigation Bar */
+
+#navbar {
+    margin: 14px;
+    padding: 2rem;
+    width: 175px;
+    position: fixed;
+    height: 100%;
+    text-align: left;
+    margin-left: 20px;
+}
+
+#nav-mobile, .hamburger, .nav-title, .cart {
+    display: none;
+}
+
+#navbar ul li {
+    margin: 30px 50px;
+    color: white;
+    list-style: none;
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+}
+
+#navbar ul li a {
+    color: gray;
+    display: block;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover {
+    text-decoration: line-through red;
+}
+
+/* Navbar Title  */
+
+#nav-title {
+    font-weight: bold;
+    margin: 30px 50px;
+    color: black;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+/* About Section */
+
+#about-container {
+    position: fixed;
+    margin-left: 18%;
+    margin-top: 5%;
+    padding: 0px 10px;
+    display: inline-block;
+}
+
+#about {
+    margin: 34px;
+    display: flex;
+}
+
+#about .box {
+    display: block;
+    padding: 10px;
+    margin: 30px 25px;
+    cursor: pointer;
+    border: 1px solid #dddddd1a;
+    box-shadow: 10px 10px 15px gray;
+    border-radius: 15px;
+}
+
+#about .box img {
+    margin: 30px;
+    border-radius: 50%;
+    width: 110px;
+    height: 110px;
+    display: block;
+}
+
+/* About Header  */
+
+.about-header {
+    margin: 0 1.5% 24px 1.5;
+    display: table;
+}
+
+.about-info {
+    float: right;
+    width: 20%;
+    margin-top: 30px;
+    margin-right: 15%;
+    color: gray;
+    font-size: 1.3rem;
+    text-align: left;
+    line-height: 30px;
+    display: block;
+    cursor: pointer;
+}
+
+.about-info::after {
+    content: "";
+    display: block;
+    width: 65px;
+    height: 3px;
+    margin-top: 20px;
+    background-color: #ff4e4e;
+    box-sizing: border-box;
+}
+
+.about-reverse-info {
+    display: none;
+}
+
+/* Utility Classes */
+
+.h-primary {
+    float: left;
+    width: 50%;
+    font-weight: bold;
+    line-height: 130%;
+    color: solid black;
+    font-size: 5rem;
+    padding: 40px;
+    display: flex;
+}
+
+.h-secondary {
+    font-weight: bold;
+    color: solid black;
+    font-size: 1.1rem;
+    padding: 5px;
+    margin: 0px 15px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.btn {
+    padding: 10px 40px;
+    background-color: red;
+    color: white;
+    margin: 40px;
+    font-size: 1.2rem;
+    border-radius: 32px;
+    border-style: none;
+    cursor: pointer;
+}
+
+/* For Mobile Devices */
+
+@media only screen and (min-width:100px) and (max-width:800px) {
+    /* Navigation Bar  */
+    #nav-mobile {
+        flex-direction: row;
+        width: 100%;
+        display: flex;
+    }
+    #navbar {
+        display: none;
+    }
+    #navbar ul li {
+        display: none;
+    }
+    #nav-title {
+        display: none;
+    }
+    /* About Section  */
+    #about-container {
+        width: auto;
+        list-style: none;
+        position: relative;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    #about {
+        align-items: center;
+        flex-wrap: wrap;
+        display: flex;
+    }
+    #about .box {
+        width: 44%;
+        border: 1px solid #dddddd1a;
+        box-shadow: 0px 6px 16px #0000001a;
+        border-radius: 15px;
+        margin: 0.5rem;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        display: flex;
+    }
+    #about .box img {
+        width: 80%;
+    }
+    *, ::after, ::before {
+        box-sizing: border-box;
+    }
+    .about-header {
+        display: flex;
+        padding: 0.5rem;
+        margin-bottom: 0.5rem;
+        align-items: center;
+        width: 100%;
+    }
+    .about-info {
+        display: none;
+    }
+    .about-reverse-info {
+        display: block;
+        color: gray;
+        padding: 0.5rem;
+        margin: 0.5rem;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+    }
+    .about-reverse-info::after {
+        content: "";
+        display: flex;
+        width: 50px;
+        margin-top: 10px;
+        height: 3px;
+        background-color: red;
+    }
+    /* Utility Classes */
+    .h-primary {
+        font-weight: bold;
+        color: black;
+        width: auto;
+        font-size: 1.8rem;
+        margin-bottom: 0;
+        margin-top: 0;
+        line-height: 1.2;
+        text-align: left;
+        display: block;
+    }
+    .btn {
+        display: none;
+    }
+    /* Mobile Header  */
+    .hamburger {
+        justify-content: flex-start;
+        margin-bottom: 0.5rem;
+        margin: 0.5rem;
+        padding: 20px;
+        display: flex;
+        font-size: 2rem;
+        color: red;
+    }
+    svg:not(:root).svg-inline--fa {
+        overflow: visible;
+    }
+    .svg-inline--fa.fa-w-14 {
+        width: 2.125rem;
+    }
+    .svg-inline--fa {
+        display: inline-block;
+        font-size: inherit;
+        height: 2rem;
+        vertical-align: -0.125em;
+    }
+    /* :not(svg) {
+        transform-origin: 0px 0px;
+    } */
+    .nav-title {
+        width: 100%;
+        font-size: 2rem;
+        display: flex;
+        justify-content: center;
+        color: black;
+        font-weight: bold;
+        margin: 0.5rem;
+        margin-bottom: 0.5rem;
+        padding: 20px;
+    }
+    h1 {
+        font-size: calc(1.8rem + 1.5vw);
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+        line-height: 1.2;
+        display: block;
+    }
+    .cart {
+        justify-content: flex-end;
+        margin: 0.5rem;
+        margin-bottom: 0.5rem;
+        padding: 20px;
+        display: flex;
+        font-size: 2rem;
+        color: red;
+    }
+    svg:not(:root).svg-inline--fa {
+        overflow: visible;
+    }
+    .svg-inline--fa.fa-w-18 {
+        width: 2.125rem;
+    }
+    .svg-inline--fa {
+        display: inline-block;
+        font-size: inherit;
+        height: 2rem;
+        vertical-align: -0.125rem;
+    }
+    /* :not(svg) {
+        transform-origin: 0px 0px;
+    } */
+}
